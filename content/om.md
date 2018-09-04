@@ -1,18 +1,16 @@
 ---
+title: "Om Kursen"
 ---
-Om
+Om Kursen.
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/om.md`.
+Nu börjar vi jobba mer med github och får det till en vana! commit, commit, push.
+Repot för denna sida hittar du på länken längst ner.
 
-Denna webbplatsen är en del av kursen [XXX](https://dbwebb.se/kurser/XXX). Uppdatera så att länken går till kursens hemsida på dwebb.se.
+Denna webbplatsen är en del av kursen [oophp-v4](https://dbwebb.se/kurser/oophp-v4).
 
-Några egna kloka ord om kursen?
+[FIGURE src=image/pokemon.jpg?w=300 caption="Gudsonens 'pikakachu' som han kallar den."]
 
-En fin och representativ bild för kursen, enligt ditt egna val.
+[dbwebb kursrepot på GitHub](https://github.com/dbwebb-se/oophp).
 
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
-
-Länka till [dbwebb kursrepot på GitHub](https://github.com/dbwebbse/XXX).
-
-Länka till [ditt eget repo för me/redovisa på GitHub](https://github.com/XXX/XXX).
+[ditt eget repo för me/redovisa på GitHub](https://github.com/8ptk4/Anax-oophp).
