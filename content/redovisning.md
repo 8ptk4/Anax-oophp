@@ -1,14 +1,17 @@
 ---
+title: "Redovisningar"
 ---
-Redovisning
+Redovisningar.
 =========================
-
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/redovisning.md`.
 
 
 
 Kmom01
 -------------------------
+- _Hur känns det att hoppa rakt in i objekt och klasser med PHP, gick det bra och kan du relatera till andra objektorienterade språk?_
+- _Berätta hur det gick det att utföra uppgiften “Gissa numret” med GET, POST och SESSION?_
+- _Har du några inledande reflektioner kring me-sidan och dess struktur?_
+- _Vilken är din TIL för detta kmom?_
 
 Här är redovisningstexten
 
