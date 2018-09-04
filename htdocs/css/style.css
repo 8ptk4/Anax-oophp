@@ -1,4 +1,9 @@
 /**
+ * Fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/**
  * General setup for layout.
  */
 html {
@@ -57,17 +62,23 @@ body {
 .outer-wrap-navbar {
     max-width: 100%;
     min-height: 2em;
-    background-color: #535353;
+    background-color: #fff;
     color: #fff;
     padding: 0.5em 0;
+    box-shadow: 0 1px 15px -2px gray;
 }
 
 .outer-wrap-navbar a {
-    color: #fff;
+    color: #000;
+    padding: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .outer-wrap-navbar a:hover {
-    color: #ddd;
+    color: #000;
+    border-bottom: 4px solid #21bdf0;
 }
 
 
