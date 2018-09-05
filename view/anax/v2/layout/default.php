@@ -29,6 +29,12 @@ $title = ($title ?? "No title") . ($baseTitle ?? " | No base title defined");
     <?php endforeach; ?>
 <?php endif; ?>
 
+<?php if (isset($awesome)) : ?>
+    <link rel="stylesheet" href="<?= $awesome ?>"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+<?php endif; ?>
+
 </head>
 <body>
 

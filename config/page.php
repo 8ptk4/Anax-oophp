@@ -13,11 +13,12 @@ return [
         "region" => "layout",
         "sort" => null,
         "data" => [
-            "baseTitle" => " | oophp",
+            "baseTitle" => " - Patrik Karlsson | oophp",
             "favicon" => "favicon.ico",
             "stylesheets" => [
                 "css/style.css",
             ],
+            "awesome" => "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
             "javascripts" => [
                 "js/main.js",
             ],
