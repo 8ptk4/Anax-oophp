@@ -12,13 +12,13 @@ namespace Anax\View;
 
 ?>
 
-<navbar class="navbar">
+<div class="navbar">
 <?php foreach ($navbar ?? [] as $item) : ?>
     <a href="<?= url($item["url"]) ?>" title="<?= $item["title"] ?>"><?= $item["text"] ?></a>
 
 <?php endforeach; ?>
-</navbar>
+</div>
 
-<navbar class="navbar_extra">
+<div class="navbar_extra">
     Placeholder
-</navbar>
+</div>

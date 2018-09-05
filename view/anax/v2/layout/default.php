@@ -12,7 +12,8 @@ namespace Anax\View;
 $title = ($title ?? "No title") . ($baseTitle ?? " | No base title defined");
 
 ?><!doctype html>
-<html>
+<!-- Fix validaton error in v3 HTML checker -->
+<html lang="sv">
 <head>
     <meta charset="utf-8">
     <title><?= $title ?></title>
