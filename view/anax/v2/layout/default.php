@@ -31,19 +31,6 @@ $title = ($title ?? "No title") . ($baseTitle ?? " | No base title defined");
 </head>
 <body>
 
-<!-- header -->
-<?php if (regionHasContent("header")) : ?>
-<div class="outer-wrap outer-wrap-header">
-    <div class="inner-wrap inner-wrap-header">
-        <div class="row">
-            <div class="wrap-header">
-                <?php renderRegion("header") ?>
-            </div>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
-
 <!-- navbar -->
 <?php if (regionHasContent("navbar")) : ?>
 <div class="outer-wrap outer-wrap-navbar">
@@ -51,6 +38,19 @@ $title = ($title ?? "No title") . ($baseTitle ?? " | No base title defined");
         <div class="row">
             <div class="wrap-navbar">
                 <?php renderRegion("navbar") ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+
+<!-- header -->
+<?php if (regionHasContent("header")) : ?>
+<div class="outer-wrap outer-wrap-header">
+    <div class="inner-wrap inner-wrap-header">
+        <div class="row">
+            <div class="wrap-header">
+                <?php renderRegion("header") ?>
             </div>
         </div>
     </div>
