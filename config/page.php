@@ -17,6 +17,7 @@ return [
             "favicon" => "favicon.ico",
             "stylesheets" => [
                 "css/style.css",
+                "css/guess.css",
             ],
             "awesome" => "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
             "javascripts" => [
