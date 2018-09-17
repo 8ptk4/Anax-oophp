@@ -42,8 +42,26 @@ använder det till.
 
 Kmom02
 -------------------------
+- _Hur gick det att överföra spelet “Gissa mitt nummer” in i din me-sida?_
+- _Berätta om din syn på modellering likt UML jämfört med verktyg som phpDocumentor. Fördelar, nackdelar, användningsområde? Vad tycker du om konceptet make doc?_
+- _Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?_
+- _Vilken är din TIL för detta kmom?_
 
-Här är redovisningstexten
+Det gick väldigt bra att överföra spelet "Gissa mitt nummer" till me-sidan. Dels fick vi en riktigt bra genomgång från Mikael i hans
+Youtube serier, och ytterligare repetition utav det i veckans föreläsning.
+
+UML känns som ett riktigt bra verktyg när man ska modellera klasser samt klassers relationer. Allt blir väldigt tydligt och kan lätt
+överskådas utav andra. phpDocumentor kräver verkligen att man får det till en vana att jobba med DocBlocks och det bör man då det blir
+bra tydliga kommentarer i sin kod. Den genererade dokumentationen utav make doc blir väldigt tydlig och man får en bra översikt utav t.ex.
+alla klasser som ingår i vilka namespaces. Fick tyvärr ganska mycket felmeddelanden i den genererade dokumentation vilket drog ner första
+intrycket.
+
+Jag tycker att det kändes bra med sättet hur vi först implementerade koden att fungera utanför ramverket. På det sättet kunde man lätt se
+att allt funkar som det ska för att sen ta delar och flytta in i ramverket. Tror också det är bra nu i början att göra på ovan sätt, och
+sen när man har mer kött på benen istället skriva koden direkt i ramverket.
+
+Det viktiga jag tar med mig från denna veckas kursmoment är arbetet med namespaces och hur det med hjälp utav dem blir lättare att
+organisera sina klasser.
 
 
 
