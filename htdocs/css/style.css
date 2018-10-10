@@ -167,3 +167,48 @@ h1 {
         display: none;
     }
 }
+
+h1 {
+    border-bottom: 1px double #ccc;
+}
+
+main {
+    min-height: 10em;
+}
+
+table {
+    padding: 0.5em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr.first {
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+img.thumb {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    text-decoration: none;
+}

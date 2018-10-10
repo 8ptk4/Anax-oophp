@@ -43,4 +43,9 @@ return [
         "url" => "dice",
         "title" => "Play Dice100.",
     ],
+    [
+        "text" => "Movie",
+        "url" => "movie/start",
+        "title" => "Movie database.",
+    ],
 ];
