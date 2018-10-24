@@ -24,7 +24,7 @@ if (!$resultset) {
     <tr>
         <td><?= $id ?></td>
         <td><?= $row->id ?></td>
-        <td><img class="thumb" src="movie/<?= $row->image ?>"></td>
+        <td><img src="../cimage/img.php?src=<?= substr($row->image, 4) ?>&width=100"></td>
         <td><?= $row->title ?></td>
         <td><?= $row->year ?></td>
     </tr>

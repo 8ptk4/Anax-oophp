@@ -1,7 +1,6 @@
 <?PHP
 namespace Patrik\Dice;
 
-
 //require "DiceHand.php";
 //include(__DIR__ . "/DiceHand.php");
 
@@ -50,19 +49,21 @@ class Players
     {
         return $this->name;
     }
-
+    /*
     public function throw()
     {
-        foreach($dicehand->dices as $dices) {
+        foreach ($dicehand->dices as $dices) {
             array_push($this->rolls, $dices->roll());
         }
     }
-
-    public function setTotalPoints($sum) {
+    */
+    public function setTotalPoints($sum)
+    {
         $this->totalPoints += $sum;
     }
 
-    public function getTotalPoints() {
+    public function getTotalPoints()
+    {
         return $this->totalPoints;
     }
 }

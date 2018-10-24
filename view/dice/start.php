@@ -21,9 +21,9 @@ namespace Anax\View;
         <h3>Check who will start</h3>
 
         <?php
-            if ($_SESSION['game']->getState() == 1) {
-                echo "<p>" . $_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->name . " starts the game!</p>";
-            }
+        if ($_SESSION['game']->getState() == 1) {
+            echo "<p>" . $_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->name . " starts the game!</p>";
+        }
         ?>
 
         <form method="post" action="start">
@@ -37,25 +37,25 @@ namespace Anax\View;
 
 
         <?php
-            if (isset($_POST['doSubmit'])) {
-                $_SESSION['game']->whoStarts();
+        if (isset($_POST['doSubmit'])) {
+            $_SESSION['game']->whoStarts();
 
-                header("Location: start");
-                exit;
-            }
+            header("Location: start");
+            exit;
+        }
 
-            foreach($_SESSION['game']->players as $player) {
-                echo "<h3>" . $player->getName() . "</h3>" . $player->dicehand->dices[0]->getLastRoll();
-            }
+        foreach ($_SESSION['game']->players as $player) {
+            echo "<h3>" . $player->getName() . "</h3>" . $player->dicehand->dices[0]->getLastRoll();
+        }
         ?>
 
         <?php
-            if (isset($_POST['doStart'])) {
-                $_SESSION['game']->setState(3);
+        if (isset($_POST['doStart'])) {
+            $_SESSION['game']->setState(3);
 
-                header("Location: start");
-                exit;
-            }
+            header("Location: start");
+            exit;
+        }
         ?>
     </div>
 <?php endif; ?>
@@ -78,31 +78,29 @@ namespace Anax\View;
 
         <?php
 
-            if (isset($_POST['doThrow'])) {
-                $_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->dicehand->roll();
+        if (isset($_POST['doThrow'])) {
+            $_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->dicehand->roll();
 
-                header("Location: start");
-                exit;
+            header("Location: start");
+            exit;
+        }
+
+        if (isset($_POST['doStore'])) {
+            //$_SESSION['game']->whoStarts();
+
+            $_SESSION['game']->test($_SESSION['game']->getPlayerturn());
+
+            echo $_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->getTotalPoints();
+
+            echo "TEST";
+
+            if ($_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->getTotalPoints() == 100) {
+                echo "WINNNER WINNER";
             }
 
-            if (isset($_POST['doStore'])) {
-                //$_SESSION['game']->whoStarts();
-
-                $_SESSION['game']->test($_SESSION['game']->getPlayerturn());
-
-                echo $_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->getTotalPoints();
-
-                echo "TEST";
-
-                if ($_SESSION['game']->players[$_SESSION['game']->getPlayerturn()]->getTotalPoints() == 100) {
-                    echo "WINNNER WINNER";
-                }
-
-
-
-                header("Location: start");
-                exit;
-            }
+            header("Location: start");
+            exit;
+        }
         ?>
         <div style="width: 100%; border: 1px solid black; padding: 10px; margin-top: 12px;">
             <?= $_SESSION['game']->play($_SESSION['game']->getPlayerturn()) ?>
@@ -111,7 +109,7 @@ namespace Anax\View;
 
         <div style="width: 100%; border: 1px solid black; padding: 10px; margin-top: 12px;">
             <h2>Scorescreen</h2>
-            <?php foreach($_SESSION['game']->players as $player) : ?>
+            <?php foreach ($_SESSION['game']->players as $player) : ?>
                 <h3><?= $player->getName() ?>: <?= $player->getTotalPoints() ?></h3>
             <?php endforeach; ?>
         </div>

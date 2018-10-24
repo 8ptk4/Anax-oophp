@@ -13,12 +13,12 @@
   *
   * @return mixed value from GET or the default value
   */
- function getGet($key, $default = null)
- {
-     return isset($_GET[$key])
-         ? $_GET[$key]
-         : $default;
- }
+function getGet($key, $default = null)
+{
+    return isset($_GET[$key])
+        ? $_GET[$key]
+        : $default;
+}
 
 
  /**
@@ -31,4 +31,21 @@
 function esc($value)
 {
     return htmlentities($value);
+}
+
+
+
+/**
+ * Get value from POST variable or return default value.
+ *
+ * @param string $key     to look for
+ * @param mixed  $default value to set if key does not exists
+ *
+ * @return mixed value from POST or the default value
+ */
+function getPost($key, $default = null)
+{
+    return isset($_POST[$key])
+        ? $_POST[$key]
+        : $default;
 }

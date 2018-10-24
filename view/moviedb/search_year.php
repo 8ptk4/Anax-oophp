@@ -8,27 +8,24 @@ namespace Anax\View;
 
 // Show incoming variables and view helper functions
 
-echo showEnvironment(get_defined_vars(), get_defined_functions());
+//echo showEnvironment(get_defined_vars(), get_defined_functions());
 ?><h1><?= $title ?></h1>
 <?php include "movies_nav.php" ?>
-<form method="get">
-    <fieldset>
-    <legend>Search</legend>
-    <input type="hidden" name="route" value="search-year">
-    <p>
-        <label>Created between:
-        <input type="number" name="year1" value="<?= $year1 ?: 1900 ?>" min="1900" max="2100"/>
-        -
-        <input type="number" name="year2" value="<?= $year2  ?: 2100 ?>" min="1900" max="2100"/>
-        </label>
-    </p>
-    <p>
-        <input type="submit" name="doSearch" value="Search">
-    </p>
+<div class="form-wrapper" style="width: 100%;">
+    <form method="get">
+        <input type="hidden" name="route" value="search-year">
+        <p>
+            <div style="justify-content: space-between;">
+            <label>Created between:<br>
 
-
-    <p><a href="start">Show all</a></p>
-    </fieldset>
-</form>
-
+                <input type="number" name="year1" value="<?= $year1 ?: 1900 ?>" min="1900" max="2100"/>
+                <span style="font-size: 30px">-</span>
+                <input type="number" name="year2" value="<?= $year2  ?: 2100 ?>" min="1900" max="2100"/>
+            </label>
+            </div>
+        </p>
+        <p>
+            <input class="button save" type="submit" name="doSearch" value="Search">
+    </form>
+</div>
 <?php include "movies_table.php" ?>

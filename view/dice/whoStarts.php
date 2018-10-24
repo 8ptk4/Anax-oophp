@@ -26,7 +26,7 @@ namespace Anax\View;
 
 <?= $who ?>
 
-<?php foreach($_SESSION['game']->players as $player) : ?>
+<?php foreach ($_SESSION['game']->players as $player) : ?>
     <h3><?= $player->dicehand->dices[0]->getLastRoll() ?></h3>
 <?php endforeach; ?>
 

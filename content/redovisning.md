@@ -81,9 +81,18 @@ Här är redovisningstexten
 
 Kmom05
 -------------------------
+- _Några reflektioner kring koden i övningen för PHP PDO och MySQL?_
+- _Hur gick det att överföra koden in i ramverket, stötte du på några utmaningar?_
+- _Berätta om din slutprodukt för filmdatabasen, gjorde du endast basfunktionaliteten eller lade du till extra features och hur tänkte du till kring användarvänligheten och din kodstruktur?_
+- _Vilken är din TIL för detta kmom?_
 
-Här är redovisningstexten
+Tycker mycket av det som handlade främst om PHP PDO och MySQL kändes igen. Fick gå tillbaka lite och insåg att vi pysslat lite med det i HTML/PHP kursen fast då med SQLite. Guiden var riktigt bra och informationsrik och det var inga problem att utföra det som stod. Att överföra koden som skapades i guiden gick bra känns som det börjar bli ganska lätt att skapa routes och vyer nu. Det svåra är att minska koden i routsen men förstår att man ska bryta ut mer i funktioner.
 
+Jag började med att strukturera filmdatabasen med en "edit" och "delete" knapp i varsin kolumn i filmtabellen samt lade jag till en länk i menyn för att lägga till filmer, med tanken på att det skulle bli ett lättare och en smartare lösning. Men problem uppstod då främst med att "edit" och "add" inte kunde använda samma form därför återgick jag till guidens lösning som egentligen är mycket mer dry och smartare.
+
+Gjorde egentligen inga extra features förutom att implementera cimage för bilderna. Där använder jag substr för bilderna för att helt enkelt ta bort bildernas sökväg i databasen. Är väl inte den bästa lösningen egentligen, men det gick bra snabbt att göra istället för att ändra alla värden i databasen.
+
+Det jag tar med mig från detta kursmoment är nog hur man i ramverket ansluter sig med hjälp utav PHP PDO till databasen både lokalt och på studentservern.
 
 
 Kmom06

@@ -21,35 +21,26 @@ class GameRound extends Game
         $this->turn = 0;
     }
 
-    public function whoStart($players) {
-        if ($this->round == 0) {
-
-        }
-    }
-
-    public function whosTurn($player) {
+    /*
+    public function whosTurn($player)
+    {
         return $player[$turn];
     }
+    */
 
-    public function allPlayers($player) {
+    public function allPlayers($player)
+    {
         return $player;
     }
 
-    public function playRound()
+    public function setRounds($player)
     {
-        if ($this->round == 0) {
-
-        }
+        $this->rounds = count($player);
     }
-
-    public function setRounds($players)
-    {
-        $this->rounds = count($players);
-    }
-
-    public function getRounds($players)
+    /*
+    public function getRounds($player)
     {
         return $this->rounds;
     }
-
+    */
 }

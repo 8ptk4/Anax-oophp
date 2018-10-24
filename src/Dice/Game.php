@@ -13,9 +13,6 @@ class Game
     public $playerturn = 0;
     public $temp = 0;
 
-
-
-
     public function __construct(string $name = "Player", int $dices = 6, int $opponents = 1)
     {
         // Alla spelare object i players!
@@ -29,35 +26,41 @@ class Game
 
 
 
-    public function getState() {
+    public function getState()
+    {
         return $this->state;
     }
 
 
 
-    public function setState($state) {
+    public function setState($state)
+    {
         $this->state = $state;
     }
 
 
-    public function setPlayerturn($player) {
+    public function setPlayerturn($player)
+    {
         $this->playerturn = $player;
     }
 
 
-    public function getPlayerturn() {
+    public function getPlayerturn()
+    {
         return $this->playerturn;
     }
 
-    public function test($player) {
+    public function test($player)
+    {
         $this->players[$player]->setTotalPoints($this->temp);
         $this->temp = 0;
     }
 
 
     // Check who starts
-    public function whoStarts() {
-        foreach($this->players as $player) {
+    public function whoStarts()
+    {
+        foreach ($this->players as $player) {
             $player->dicehand->dices[0]->roll();
         }
 
@@ -80,7 +83,8 @@ class Game
 
 
 
-    public function play($player) {
+    public function play($player)
+    {
         //$this->players[$player]->dicehand->roll();
         echo "<h3>" . $this->players[$player]->getName() . "</h3>";
 
@@ -88,19 +92,14 @@ class Game
         echo "<p>" . implode(", ", $this->players[$player]->dicehand->values()) . "</p>";
 
         if (in_array(1, $this->players[$player]->dicehand->values())) {
-
             $this->temp = 0;
-
             echo "<p>You rolled 1, and lost all points</p>";
             echo "<p>Turn goes over to the next player</p>";
-
             if ($this->getPlayerturn() == 0) {
                 $this->setPlayerturn(1);
             } else if ($this->getPlayerturn() == 1) {
                 $this->setPlayerturn(0);
             }
-
-
         } else {
             $this->temp += $this->players[$player]->dicehand->sum();
         }
@@ -115,7 +114,8 @@ class Game
     }
 
 
-    public function playerRoll($i, $e) {
-        return $this->players[$i]->dicehand->dices[$e]->getLastRoll();
+    public function playerRoll($argOne, $argTwo)
+    {
+        return $this->players[$argOne]->dicehand->dices[$argTwo]->getLastRoll();
     }
 }
